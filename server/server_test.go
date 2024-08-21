@@ -10,7 +10,7 @@ import (
 
 func TestNewServer(t *testing.T) {
 	var conn net.PacketConn
-	srv := NewQuicServer(conn, camera.NewCamera(nil), nil)
+	srv := NewQuicServer(conn, camera.NewCamera(nil), nil, nil)
 	assert.Implements(t, (*Server)(nil), srv)
 }
 

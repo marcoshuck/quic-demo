@@ -42,7 +42,7 @@ func main() {
 	}
 
 	logger.Debug("Initializing QUIC server")
-	srv := server.NewQuicServer(conn, src, tlsConfig)
+	srv := server.NewQuicServer(conn, src, tlsConfig, logger)
 
 	logger.Info("Listening on QUIC Server")
 	if err := srv.Listen(); err != nil {
