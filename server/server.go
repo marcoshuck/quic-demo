@@ -46,10 +46,6 @@ func (q *quicServer) Listen() error {
 	return nil
 }
 
-func Run(srv Server) error {
-	return srv.Listen()
-}
-
 func (q *quicServer) handleConn(conn quic.Connection) error {
 	q.logger.Debug("Accepting stream...")
 	stream, err := conn.OpenStream()
